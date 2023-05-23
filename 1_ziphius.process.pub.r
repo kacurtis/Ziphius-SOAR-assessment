@@ -10,11 +10,11 @@ library(tidyr)
 
 ## import data
 library(readxl)
-datapath <- "SCORE-Zc-Data 20190315.xlsx"
+datapath <- "SCORE-Zc-Data_20190315.xlsx"
 sight <- read_excel(datapath, sheet="SCORE-Zc-Sightings", col_names=TRUE)
 indiv <- read_excel(datapath, sheet="SCORE-Zc-ID", col_names=TRUE)
 detach("package:readxl")
-effort <- readr::read_csv("tSCORE-Zica-Effort 20190315.txt", 
+effort <- readr::read_csv("tSCORE-Zica-Effort_20190315.txt", 
                           col_types = cols_only(
                             Vessel = col_character(),
                             Date = col_character(),
@@ -34,7 +34,7 @@ effort <- readr::read_csv("tSCORE-Zica-Effort 20190315.txt",
                           ))
 
 # load old effort file to splice in effort for Vessel N2 10/24/2007 after 11:11
-effort.20180427 <- readr::read_csv("SCORE-Zica-TrackGISCond 20180427.txt", 
+effort.20180427 <- readr::read_csv("SCORE-Zica-TrackGISCond_20180427.txt", 
                                    col_types = cols_only(
                                      Vessel = col_character(),
                                      Date = col_character(),
